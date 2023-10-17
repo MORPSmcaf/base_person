@@ -1,0 +1,217 @@
+<odoo>
+    <data>
+        <record id="view_room_reservation_form" model="ir.ui.view">
+            <field name="name">room.reservation.form</field>
+            <field name="model">room.reservation</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+
+                        <div class="oe_title">
+                            <label for="name" class="oe_edit_only" string="Reservation Name"/>
+                            <h1>
+                                <field name="name"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <field name="room_type_id"/>
+
+                        </group>
+
+                        <notebook>
+                            <page string="Reservation Description">
+                                <field name="reservation_des" widget="text"
+                                       options="{'no_create': True, 'no_edit': True}"/>
+                            </page>
+                            <page string="Start Date">
+                                <field name="check_in_date" widget="date"/>
+                            </page>
+                            <page string="End Date">
+                                <field name="check_out_date" widget="date"/>
+                            </page>
+                            <page string="Seats">
+                                <field name="seats" widget="integer"/>
+                            </page>
+                            <page string="Scheduled Activity">
+
+
+                                <button name="action_show_activity" type="object" string="Show Activity" class="oe_highlight"/>
+
+
+
+
+
+
+
+
+
+                            </page>
+
+                        </notebook>
+
+
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="view_room_reservation_tree" model="ir.ui.view">
+            <field name="name">room.reservation.tree</field>
+            <field name="model">room.reservation</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="room_type_id"/>
+                    <field name="seats"/>
+                    <field name="check_in_date"/>
+                    <field name="check_out_date"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="view_room_type_form" model="ir.ui.view">
+            <field name="name">room.type.form</field>
+            <field name="model">room.type</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="description"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="view_room_type_tree" model="ir.ui.view">
+            <field name="name">room.type.tree</field>
+            <field name="model">room.type</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="description"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_room_activity_type_form" model="ir.ui.view">
+            <field name="name">room.activity.form</field>
+            <field name="model">room.activity</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="description"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_room_activity_type_tree" model="ir.ui.view">
+            <field name="name">room.activity.tree</field>
+            <field name="model">room.activity</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="description"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="view_room_show_activity_form" model="ir.ui.view">
+            <field name="name">room.show.activity.form</field>
+            <field name="model">room.show.activity</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="activity_type_id"/>
+                            <field name="activity_summary"/>
+                            <field name="activity_assigned"/>
+                            <field name="activity_dueDate"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_room_show_activity_tree" model="ir.ui.view">
+            <field name="name">room.show.activity.tree</field>
+            <field name="model">room.show.activity</field>
+            <field name="arch" type="xml">
+
+                <tree>
+
+
+                    <field name="activity_type_id"/>
+                    <field name="activity_summary"/>
+                    <field name="activity_assigned"/>
+                    <field name="activity_dueDate"/>
+
+
+                </tree>
+
+            </field>
+        </record>
+
+
+<!--        <record id="action_trigger_external_action" model="ir.actions.act_url">-->
+<!--    <field name="name">Trigger External Action</field>-->
+<!--    <field name="url">/web#action=room.action_room_show_activity</field>-->
+<!--    <field name="target">new</field>  &lt;!&ndash; Use 'new' to open the action in a new tab/window &ndash;&gt;-->
+<!--</record>-->
+
+
+
+
+
+
+
+                <record id="action_room_show_activity" model="ir.actions.act_window">
+                    <field name="name">Room Show Activity</field>
+                    <field name="res_model">room.show.activity</field>
+                    <field name="view_mode">tree,form</field>
+                </record>
+
+        <!-- Action to open the Room Reservation form view -->
+        <record id="action_room_reservation" model="ir.actions.act_window">
+            <field name="name">Room Reservations</field>
+            <field name="res_model">room.reservation</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+        <record id="action_room_activity" model="ir.actions.act_window">
+            <field name="name">Room Activity</field>
+            <field name="res_model">room.activity</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Action to open the Room Type form view -->
+        <record id="action_room_type" model="ir.actions.act_window">
+            <field name="name">Room Types</field>
+            <field name="res_model">room.type</field>
+            <field name="view_mode">tree,form</field>
+
+        </record>
+
+        <!-- Main Menu for Room Reservation Module -->
+        <menuitem id="menu_root" name="Room Reservation" sequence="10"/>
+
+        <!-- Submenu for Room Reservations -->
+        <menuitem id="menu_room_reservation" name="Room Reservations" parent="menu_root"
+                  action="action_room_reservation"/>
+
+        <menuitem id="menu_room_configurations" name="Configurations" parent="menu_root"/>
+
+        <!-- Submenu for Room Types -->
+        <menuitem id="menu_room_type" name="Room Types" parent="menu_room_configurations" action="action_room_type"/>
+        <menuitem id="menu_activity_type" name="Activity Types" parent="menu_room_configurations" action="action_room_activity"/>
+        <menuitem id="menu_activity_show" name="Activity Show" parent="menu_room_configurations" action="action_room_show_activity"/>
+    </data>
+</odoo>
