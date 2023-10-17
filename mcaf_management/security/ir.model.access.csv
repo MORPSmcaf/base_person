@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_mcaf_management_model,access_mcaf_management_model,model_mcaf_management,base.group_user,1,1,1,1
+access_mcaf_management_person_model,access_mcaf_management_person_model,model_mcaf_management_person,base.group_user,1,1,1,1
+access_mcaf_management_staff_model,access_mcaf_management_staff_model,model_mcaf_management_staff,base.group_user,1,1,1,1

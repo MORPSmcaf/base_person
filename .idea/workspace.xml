@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67bd924f-bec3-4ad0-a5ff-dd159215d072" name="Changes" comment="[REM] Not Required (model.py)&#10;&#10;This module is not required.&#10;&#10;Deleting" />
+    <list default="true" id="67bd924f-bec3-4ad0-a5ff-dd159215d072" name="Changes" comment="[MOV] Branch creation" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -50,7 +50,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "16.0",
-    "last_opened_file_path": "/home/odoo/PycharmProjects/odoo-16"
+    "last_opened_file_path": "/home/odoo/PycharmProjects/base_person"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -86,7 +86,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697134715300</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="[MOV] Branch creation">
+      <option name="closed" value="true" />
+      <created>1697553967489</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1697553967489</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -116,6 +124,7 @@
     <MESSAGE value="[ADD] Directory: initializing the task directory&#10;&#10;Added the mcaf_management skeleton directory to work on it.&#10;&#10;Currently has one module in it." />
     <MESSAGE value="[ADD] Task Completed&#10;&#10;Added necessary models and views to the model&#10;&#10;To run the model, you need to be the superuser and that cen be achieved after going inside the debug mode. I have added three models&#10;1. Mcaf Managment&#10;2. Person&#10;3. Staff&#10;&#10;Staff is inherited from person then person is inherited from mcaf management." />
     <MESSAGE value="[REM] Not Required (model.py)&#10;&#10;This module is not required.&#10;&#10;Deleting" />
-    <option name="LAST_COMMIT_MESSAGE" value="[REM] Not Required (model.py)&#10;&#10;This module is not required.&#10;&#10;Deleting" />
+    <MESSAGE value="[MOV] Branch creation" />
+    <option name="LAST_COMMIT_MESSAGE" value="[MOV] Branch creation" />
   </component>
 </project>
